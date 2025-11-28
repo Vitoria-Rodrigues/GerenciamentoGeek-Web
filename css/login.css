@@ -95,4 +95,79 @@ form > button:hover{
 
 /* Mobile */
 
+/* Tablet / notebook */
+@media (max-width: 1024px) {
+    form{
+        width: 32vw;
+    }
+}
 
+/* Tablet vertical */
+@media (max-width: 768px) {
+    .logo{
+        height: 24vh;
+    }
+
+    form{
+        width: 40vw;
+        height: auto;
+        padding: 3vh 0;
+    }
+
+    form > div > div > label{
+        font-size: 2.5vh;
+    }
+
+    form > div > div > input{
+        font-size: 2vh;
+    }
+}
+
+/* Cellphone */
+@media (max-width: 480px) {
+    main{
+        gap: 3vh;
+    }
+
+    .logo{
+        height: 20vh;
+    }
+
+    form{
+        width: 70vw;
+        gap: 3vh;
+    }
+
+    form > button{
+        font-size: 1rem;
+        padding: 1vh;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .logo{
+        height: 20vh;
+    }
+
+    form{
+        width: 80vw;
+        border-radius: 1.5vh;
+        gap: 2.5vh;
+        padding: 2vh 0;
+    }
+
+    form > div > div > label{
+        font-size: 2.4vh;
+    }
+
+    form > div > div > input{
+        font-size: 2vh;
+        padding: 1vh 1.2vh;
+    }
+
+    form > button{
+        font-size: 0.9rem;
+        padding: 0.8vh;
+    }
+}

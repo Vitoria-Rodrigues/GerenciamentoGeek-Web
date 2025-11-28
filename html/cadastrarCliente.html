@@ -4,18 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Cliente</title>
+    <link rel="stylesheet" href="../css/cadastrarCliente.css">
+    <!-- Font Montserrat -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="./assets/img/LogoGG.png" alt="Logo GG">
-        </div>
-        <nav class="saida">
-            <button>Sair</button>
-        </nav>
-    </header>
-    <main>
+        <aside>
+            <div>
+                <nav>
+                    <ul>
+                        <li><h2>Cadastrar cliente</h2></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+        <section>
+            <form>
+                <h1>Cadastrar Cliente</h1>
+                <div>
+                    <div>
+                        <label>Nome:</label>
+                        <input type="text">
+                    </div>
         
-    </main>
+                    <div>
+                        <div>
+                            <label>CPF:</label>
+                            <input type="text" maxlength="14">
+                        </div>
+                        <div>
+                            <label>Sexo:</label>
+                            <select name="sexo" id="sexo">
+                                <option value="Feminino">Feminino</option>
+                                <option value="Masculino">Masculino</option>
+                                <option value="Transgenero">Transgenero</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label>Telefone:</label>
+                        <input type="text" maxlength="14">
+                    </div>
+                </div>
+                <button>Cadastrar</button>
+            </form>
+        </section>
 </body>
 </html>
