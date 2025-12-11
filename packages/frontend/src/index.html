@@ -92,6 +92,39 @@
                 </div>
             </footer>
         </nav>
+        <main>
+            <section id="register-customer" class="register-customer content-section">
+                <form>
+                    <h1>Cadastrar Cliente</h1>
+                    <div>
+                        <div>
+                            <label>Nome:</label>
+                            <input type="text">
+                        </div>
+            
+                        <div>
+                            <div>
+                                <label>CPF:</label>
+                                <input type="text" maxlength="14">
+                            </div>
+                            <div>
+                                <label>Sexo:</label>
+                                <select name="sexo" id="sexo">
+                                    <option value="Feminino">Feminino</option>
+                                    <option value="Masculino">Masculino</option>
+                                    <option value="Transgenero">Transgenero</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Telefone:</label>
+                            <input type="text" maxlength="14">
+                        </div>
+                    </div>
+                    <button>Cadastrar</button>
+                </form>
+            </section>
+        </main>
     </section>
     <script type="module" src="js/app.js"></script>
 </body>
