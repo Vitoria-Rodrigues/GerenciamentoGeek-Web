@@ -1,0 +1,46 @@
+{
+  "name": "@ggeek/mentoring-monorepo",
+  "version": "1.0.0",
+  "author": "Vitória Rodrigues Ferreira",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+"scripts": {
+    "// --- FRONTEND DEV (MOCK & JAVA)   ---": "",
+    "front:dev:mock": "npm run dev -w @ggeek/frontend",
+    "front:dev:java": "npm run dev -w @ggeek/frontend -- --mode java",
+    "dev:mockserver": "npm run dev -w @ggeek/mockserver",
+    "dev:mockstack": "concurrently \"npm run dev:mockserver\" \"npm run front:dev:mock\"",
+
+    "// --- TESTE DE BUILD (Frontend) ---": "",
+    "front:build": "npm run build -w @ggeek/frontend",
+    
+    "// 1. Preview com Mock": "",
+    "front:preview-mock": "npm run preview -w @ggeek/frontend",
+    
+    "// 2. Preview com Java": "",
+    "front:preview-java": "npm run preview:java -w @ggeek/frontend",
+
+    "// --- DOCKER INFRA (Controle do Backend) ---": "",
+    
+    "db:up": "docker compose up -d db",
+    "desc_db_up": "Inicia APENAS o container do MySQL (para usar com o Mock ou desenvolvimento local do Java)",
+
+    "docker:down": "docker compose down",
+    "desc_docker_down": "Desliga TODOS os containers",
+
+    "docker:logs": "docker compose logs -f",
+    "desc_docker_logs": "Exibe os logs de TODOS os containers",
+
+    "// --- UTILITÁRIOS ---": "",
+    "db:clean": "docker compose down --volumes",
+    "desc_db_clean": "Remove containers e APAGA o volume do banco deste projeto (ggeek_mysql_data)",
+    
+    "db:reset": "npm run db:clean && npm run db:up",
+    "desc_db_reset": "Reseta o banco de dados (remove volume e recria container)"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
