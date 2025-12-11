@@ -11,7 +11,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap; 
+    flex-wrap: nowrap;
     align-items: center;
     gap: 4vh;
     background-color: #fdfdfd;
