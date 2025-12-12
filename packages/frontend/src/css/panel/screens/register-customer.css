@@ -7,7 +7,7 @@
 }
 
 .register-customer > form{
-    width: 80%;
+    width: 60%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -68,13 +68,11 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    gap: 4vw;
 }
 
 .register-customer > form > div > div:nth-of-type(2) > div{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex: 1 1 0;
 }
 
 .register-customer > form > div > div:nth-of-type(2) > div label{
