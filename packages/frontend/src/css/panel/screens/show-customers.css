@@ -41,7 +41,7 @@
     gap: 2vw;
 }
 
-.show-customers > div > div:nth-of-type(1) > div:nth-of-type(1) input{
+.show-customers > div > div:nth-of-type(1) input{
     font-size: 2.7vh;
     width: 80%;
     height: 5vh;
@@ -54,7 +54,7 @@
     box-shadow: 4px 3px 2px 0px rgba(0,0,0,0.1);
 }
 
-.show-customers > div > div:nth-of-type(1) > div:nth-of-type(1) button{
+.show-customers > div > div:nth-of-type(1) button{
     width: 20%;
     height: 5vh;
     font-size: 1.7rem;
@@ -66,7 +66,7 @@
     cursor: pointer;
 }
 
-.show-customers > div > div:nth-of-type(1) > div:nth-of-type(1) button:hover{
+.show-customers > div > div:nth-of-type(1) button:hover{
     color: #fff;
     background-color: #013d79;
 }
@@ -82,12 +82,12 @@
     box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.1);
 }
 
-.show-customers > div > div:nth-of-type(2) > table{
+.show-customers > div > div:nth-of-type(2) table{
     width: 100%;
     border-collapse: collapse;
 }
 
-.show-customers > div > div:nth-of-type(2) > table > thead tr{
+.show-customers > div > div:nth-of-type(2) thead tr{
     background: #EFEFEF;
     border: 1px solid #b5c3d1;
     color: #013d79;
@@ -96,7 +96,7 @@
     line-height: 4vh;
 }
 
-.show-customers > div > div:nth-of-type(2) > table > tbody tr td{
+.show-customers > div > div:nth-of-type(2) tbody tr td{
     background: #f5f1f1;
     text-align: center;
     font-size: 1rem;
