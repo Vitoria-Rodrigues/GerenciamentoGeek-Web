@@ -23,3 +23,7 @@ services:
 
 volumes:
   mysql_data:
+
+networks:
+  geek_network:
+    driver: bridge
