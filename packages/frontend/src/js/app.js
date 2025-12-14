@@ -12,6 +12,7 @@ import '@css/panel/screens/register-customer.css';
 import '@css/panel/screens/register-product.css';
 import '@css/panel/screens/register-sale.css';
 import '@css/panel/screens/show-customers.css';
+import '@css/panel/screens/show-products.css';
 
 // SVG Icons imports
 import iconCustomer from '@/assets/svg/sidebar/register-customer.svg?raw';
