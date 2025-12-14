@@ -10,6 +10,7 @@
     width: 80%;
     height: auto;
     display: flex;
+    padding-bottom: 5vh;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
@@ -110,21 +111,4 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 4vh;
-}
-
-.show-sales > div > div:nth-of-type(3) button{
-    width: 15%;
-    height: 5vh;
-    font-size: 1.5rem;
-    color: #013d79;
-    background-color: #fff;
-    border: 2px solid #013d79;
-    border-radius: 1vh;
-    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.1);
-    cursor: pointer;
-}
-
-.show-sales > div > div:nth-of-type(3) button:hover{
-    color: #fff;
-    background-color: #013d79;
 }
