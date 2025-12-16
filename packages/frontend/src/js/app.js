@@ -13,7 +13,7 @@ import '@css/panel/screens/register-employee.css';
 import '@css/panel/screens/register-product.css';
 import '@css/panel/screens/register-sale.css';
 import '@css/panel/screens/show-customers.css';
-import '@css/panel/screens/show-employee.css';
+import '@css/panel/screens/show-employees.css';
 import '@css/panel/screens/show-products.css';
 import '@css/panel/screens/show-sales.css';
 
