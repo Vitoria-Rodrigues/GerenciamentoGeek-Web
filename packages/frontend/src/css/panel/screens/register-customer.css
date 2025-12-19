@@ -72,7 +72,10 @@
 }
 
 .register-customer > form > div > div:nth-of-type(2) > div{
+    display: flex;
+    flex-direction: column;
     flex: 1 1 0;
+    gap: 1vh;
 }
 
 .register-customer > form > div > div:nth-of-type(2) > div label{
