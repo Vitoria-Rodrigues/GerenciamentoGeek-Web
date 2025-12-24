@@ -5,7 +5,8 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-  base: "/",
+  base: "./",
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -18,7 +19,6 @@ export default defineConfig({
     host: true,
     port: 5173,
     proxy: {
-      // Captura qualquer rota que comece com um dos nomes abaixo
       "^/(login|clientes|funcionarios|produtos|categorias|vendas)": {
         target: "http://localhost:3000",
         changeOrigin: true,
@@ -27,7 +27,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "dist"),
+    outDir: "dist",
     emptyOutDir: true,
     rollupOptions: {
       output: {
