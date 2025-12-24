@@ -1,0 +1,218 @@
+@media screen and (min-width: 1280px) {
+  :root {
+    font-size: 1.8vh;
+  }
+
+  .sidebar {
+    width: 4.5rem;
+  }
+
+  .sidebar-header {
+    height: 4.5rem;
+  }
+
+  .tela.dividir {
+    padding: 0 4rem;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .divisao-esquerda {
+    width: 50%;
+    flex: none;
+  }
+
+  .divisao-direita {
+    min-width: 0;
+  }
+
+  .container-titulo {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .container-formulario,
+  .container-tabela,
+  .container-pesquisa {
+    padding: 1.2rem;
+  }
+
+  .grade-formulario {
+    gap: 0.8rem;
+  }
+
+  .tabela-wrapper {
+    max-height: 52vh;
+  }
+
+  .acoes-tabela {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  :root {
+    font-size: 16px;
+  }
+
+  .sidebar {
+    width: 6rem;
+  }
+
+  .sidebar-header {
+    height: 6rem;
+  }
+
+  .tela.dividir {
+    padding: 0 2rem;
+    gap: 4rem;
+  }
+
+  .divisao-esquerda {
+    width: 40rem;
+  }
+
+  .container-titulo {
+    font-size: 4vh;
+    margin-bottom: 2rem;
+  }
+
+  .container-formulario,
+  .container-tabela,
+  .container-pesquisa {
+    padding: 2.5rem;
+  }
+
+  .grade-formulario {
+    gap: 1.5rem;
+  }
+
+  .tabela-wrapper {
+    max-height: 60vh;
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  :root {
+    font-size: 22px;
+  }
+
+  .sidebar {
+    width: 8rem;
+  }
+
+  .sidebar-header svg,
+  .sidebar-header span[data-icon] svg {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .menu-item {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+
+  .menu-item span[data-icon] svg {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .tela.dividir {
+    padding: 0 3rem;
+    gap: 6rem;
+  }
+
+  .divisao-esquerda {
+    width: 55rem;
+  }
+
+  .container-formulario,
+  .container-tabela,
+  .container-pesquisa {
+    padding: 4rem;
+    border-radius: 2.5rem;
+  }
+
+  .tabela-wrapper {
+    max-height: 70vh;
+  }
+
+  .formulario-login {
+    max-width: 40rem;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  :root {
+    font-size: 32px;
+  }
+
+  .sidebar {
+    width: 12rem;
+  }
+
+  .sidebar-header svg,
+  .sidebar-header span[data-icon] svg {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .menu-item {
+    width: 9rem;
+    height: 9rem;
+    border-radius: 2.5rem;
+  }
+
+  .menu-item span[data-icon] svg {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  .tela.dividir {
+    padding: 0 2rem;
+    gap: 10rem;
+  }
+
+  .divisao-esquerda {
+    width: 85rem;
+  }
+
+  .container-titulo {
+    font-size: 5.5vh;
+    margin-bottom: 5rem;
+  }
+
+  .container-formulario,
+  .container-tabela,
+  .container-pesquisa {
+    padding: 7rem;
+    border-radius: 4.5rem;
+    box-shadow: 0 3rem 8rem rgba(0, 0, 0, 0.25);
+  }
+
+  .grade-formulario {
+    gap: 4.5rem;
+  }
+
+  .campo input,
+  .campo select,
+  .campo textarea {
+    padding: 2rem 3rem;
+    border-radius: 2rem;
+  }
+
+  .botao-submit {
+    padding: 2.5rem 8rem;
+    border-radius: 2rem;
+  }
+
+  .tabela-wrapper {
+    max-height: 65vh;
+  }
+
+  .formulario-login {
+    max-width: 60rem;
+    padding: 8rem;
+    border-radius: 5rem;
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "ADMINISTRADOR": {
+    "telas": ["tela-funcionario", "tela-cliente", "tela-produto", "tela-venda"],
+    "acoes": {
+      "tela-funcionario": ["cadastrar", "editar", "excluir"],
+      "tela-cliente": ["cadastrar", "editar", "excluir"],
+      "tela-produto": ["cadastrar", "editar", "excluir"],
+      "tela-venda": ["cadastrar", "editar", "excluir"]
+    }
+  },
+  "GERENTE": {
+    "telas": ["tela-funcionario", "tela-cliente", "tela-produto", "tela-venda"],
+    "acoes": {
+      "tela-funcionario": ["cadastrar", "editar", "excluir"],
+      "tela-cliente": ["cadastrar", "editar", "excluir"],
+      "tela-produto": ["cadastrar", "editar", "excluir"],
+      "tela-venda": ["cadastrar", "editar"]
+    }
+  },
+  "ATENDENTE": {
+    "telas": ["tela-cliente", "tela-produto", "tela-venda"],
+    "acoes": {
+      "tela-cliente": ["cadastrar", "editar", "excluir"],
+      "tela-produto": ["cadastrar", "editar", "excluir"],
+      "tela-venda": ["cadastrar"]
+    }
+  },
+  "CAIXA": {
+    "telas": ["tela-cliente", "tela-venda"],
+    "acoes": {
+      "tela-cliente": ["cadastrar"],
+      "tela-venda": ["cadastrar"]
+    }
+  }
+}

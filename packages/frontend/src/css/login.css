@@ -1,0 +1,86 @@
+.tela-login {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.tela-login > img {
+  height: clamp(8rem, 25vh, 15rem);
+}
+
+.formulario-login {
+  width: 90%;
+  max-width: 28rem;
+  padding: 2.5rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.corpo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formulario-login .campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formulario-login label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.formulario-login input {
+  padding: 0.8rem 1rem;
+  background: #efefef;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+}
+
+.formulario-login input:focus {
+  background: #fff;
+  box-shadow: 0 0 0 0.2rem var(--primary-glow);
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-height: 1rem;
+  margin-top: 0.2rem;
+}
+
+.input-error {
+  outline: 0.15rem solid var(--error);
+  background: #fadbd8 !important;
+}
+
+.botao-login {
+  width: 100%;
+  padding: 0.8rem;
+  background: #fff;
+  color: var(--primary);
+  border: 0.15rem solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.botao-login:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-0.1rem);
+}

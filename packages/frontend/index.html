@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciamento Geek</title>
+    <link rel="icon" type="image/x-icon" href="/favicon-identity.ico" />
+    <link rel="icon" type="image/svg+xml" href="/favicon-identity.svg" />
+  </head>
+  <body>
+    <section id="tela-login" class="tela-login">
+      <span data-icon="identidade:logo-identidade"></span>
+      <form id="formulario-login" class="formulario-login">
+        <div class="corpo-formulario">
+          <div class="campo">
+            <label>Login</label>
+            <input name="login" type="text" autocomplete="username" />
+          </div>
+          <div class="campo">
+            <label>Senha</label>
+            <input
+              name="senha"
+              type="password"
+              autocomplete="current-password"
+            />
+          </div>
+        </div>
+        <button id="botao-login" type="submit" class="botao-login">
+          Entrar
+        </button>
+      </form>
+    </section>
+
+    <section id="painel" class="painel">
+      <nav class="sidebar">
+        <div class="sidebar-wrapper">
+          <header class="sidebar-header">
+            <span data-icon="identidade:logo-identidade"></span>
+          </header>
+          <main class="sidebar-menu">
+            <ul class="lista-menu">
+              <!-- <li class="menu-item" data-target="tela-home">
+                <span data-icon="fontawesome:casa"></span>
+                <p class="tooltip">Home</p>
+              </li> -->
+              <li class="menu-item" data-target="tela-funcionario">
+                <span data-icon="icones:funcionario"></span>
+                <p class="tooltip">Funcionários</p>
+              </li>
+              <li class="menu-item" data-target="tela-cliente">
+                <span data-icon="icones:cliente"></span>
+                <p class="tooltip">Clientes</p>
+              </li>
+              <li class="menu-item" data-target="tela-produto">
+                <span data-icon="icones:produto"></span>
+                <p class="tooltip">Produtos</p>
+              </li>
+              <li class="menu-item" data-target="tela-venda">
+                <span data-icon="icones:venda"></span>
+                <p class="tooltip">Vendas</p>
+              </li>
+            </ul>
+          </main>
+        </div>
+        <footer class="sidebar-footer">
+          <button id="botao-sair" class="botao-sair">
+            <span data-icon="icones:sair"></span>
+            <p class="tooltip">Sair</p>
+          </button>
+        </footer>
+      </nav>
+
+      <main class="painel-telas">
+        <!-- <section id="tela-home" class="tela">
+          <div><h1>teste</h1></div>
+        </section> -->
+        <section id="tela-cliente" class="tela dividir">
+          <div class="container-divisao-tela divisao-esquerda">
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:adicionar"></span>
+              Cadastrar Cliente
+            </h1>
+            <form id="formulario-cliente" class="container-formulario">
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome Completo</label>
+                  <input name="nome" type="text" />
+                </div>
+                <div class="campo">
+                  <label>CPF</label>
+                  <input name="cpf" type="text" maxlength="14" />
+                </div>
+                <div class="campo">
+                  <label>Sexo</label>
+                  <select name="sexo">
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <div class="campo inteiro">
+                  <label>Telefone</label>
+                  <input name="telefone" type="text" maxlength="14" />
+                </div>
+              </div>
+            </form>
+            <div class="acoes-cadastro">
+              <button id="cadastrar-cliente" type="submit" class="botao-submit">
+                Cadastrar
+              </button>
+            </div>
+          </div>
+
+          <div
+            id="view-listagem-cliente"
+            class="container-divisao-tela divisao-direita"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:lista"></span>
+              Lista de Clientes
+            </h1>
+            <div class="container-pesquisa">
+              <div class="campo inteiro">
+                <div class="pesquisa-wrapper">
+                  <label>
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Cliente
+                  </label>
+                  <input
+                    data-filtro-alvo="tabela-tela-cliente"
+                    placeholder="Qualquer informação do cliente aqui"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container-tabela">
+              <div class="tabela-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>CPF</th>
+                      <th>Sexo</th>
+                      <th>Telefone</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-tipo-tabela="cliente"
+                    data-tabela-alvo="tabela-tela-cliente"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="acoes-tabela">
+              <button id="btn-editar-cliente" class="botao-submit">
+                Editar
+              </button>
+              <button id="btn-excluir-cliente" class="botao-submit">
+                Excluir
+              </button>
+            </div>
+          </div>
+          <div
+            id="view-edicao-cliente"
+            class="container-divisao-tela divisao-direita escondido"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:editar"></span>
+              Editar Cliente
+            </h1>
+            <form id="formulario-edicao-cliente" class="container-formulario">
+              <input type="hidden" name="id" />
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome Completo</label>
+                  <input name="nome" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>CPF</label>
+                  <input name="cpf" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Sexo</label>
+                  <select name="sexo">
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+                <div class="campo inteiro">
+                  <label>Telefone</label>
+                  <input name="telefone" type="text" required />
+                </div>
+              </div>
+            </form>
+            <div class="acoes-tabela" style="margin-top: 2rem">
+              <button id="btn-salvar-edicao" class="botao-submit">
+                Salvar Alterações
+              </button>
+              <button id="btn-cancelar-edicao" class="botao-submit">
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="tela-funcionario" class="tela dividir">
+          <div class="container-divisao-tela divisao-esquerda">
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:adicionar"></span>
+              Cadastrar Funcionário
+            </h1>
+            <form id="formulario-funcionario" class="container-formulario">
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome</label>
+                  <input name="nome" type="text" />
+                </div>
+                <div class="campo">
+                  <label>CPF</label>
+                  <input name="cpf" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Cargo</label>
+                  <select name="cargo">
+                    <option value="4">Caixa</option>
+                    <option value="3">Atendente</option>
+                    <option value="2">Gerente</option>
+                    <option value="1">Administrador</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label>CEP</label>
+                  <input name="cep" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Número</label>
+                  <input name="numero" type="text" />
+                </div>
+                <div class="campo inteiro">
+                  <label>Logradouro</label>
+                  <input name="logradouro" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Complemento</label>
+                  <input name="complemento" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Telefone</label>
+                  <input name="telefone" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Login</label>
+                  <input name="login" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Senha</label>
+                  <input name="senha" type="password" />
+                </div>
+              </div>
+            </form>
+            <div class="acoes-cadastro">
+              <button
+                id="cadastrar-funcionario"
+                type="submit"
+                class="botao-submit"
+              >
+                Cadastrar
+              </button>
+            </div>
+          </div>
+          <div
+            id="view-listagem-funcionario"
+            class="container-divisao-tela divisao-direita"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:lista"></span>
+              Lista de Funcionarios
+            </h1>
+            <div class="container-pesquisa">
+              <div class="campo inteiro">
+                <div class="pesquisa-wrapper">
+                  <label class="container-titulo">
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Funcionario
+                  </label>
+                  <input
+                    data-filtro-alvo="tabela-tela-funcionario"
+                    placeholder="Qualquer informação do funcionario aqui"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container-tabela">
+              <div class="tabela-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Nome</th>
+                      <th>CPF</th>
+                      <th>Cargo</th>
+                      <th>Telefone</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-tipo-tabela="funcionario"
+                    data-tabela-alvo="tabela-tela-funcionario"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="acoes-tabela">
+              <button id="btn-editar-funcionario" class="botao-submit">
+                Editar
+              </button>
+              <button id="btn-excluir-funcionario" class="botao-submit">
+                Excluir
+              </button>
+            </div>
+          </div>
+          <div
+            id="view-edicao-funcionario"
+            class="container-divisao-tela divisao-direita escondido"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:editar"></span>
+              Editar Funcionário
+            </h1>
+            <form
+              id="formulario-edicao-funcionario"
+              class="container-formulario"
+            >
+              <input type="hidden" name="id" />
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome</label>
+                  <input name="nome" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>CPF</label>
+                  <input name="cpf" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Cargo</label>
+                  <select name="cargo">
+                    <option value="4">Caixa</option>
+                    <option value="3">Atendente</option>
+                    <option value="2">Gerente</option>
+                    <option value="1">Administrador</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label>CEP</label>
+                  <input name="cep" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Número</label>
+                  <input name="numero" type="text" />
+                </div>
+                <div class="campo inteiro">
+                  <label>Logradouro</label>
+                  <input name="logradouro" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Complemento</label>
+                  <input name="complemento" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Telefone</label>
+                  <input name="telefone" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Login</label>
+                  <input name="login" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Senha</label>
+                  <input
+                    name="senha"
+                    type="password"
+                    placeholder="Nova senha (opcional)"
+                  />
+                </div>
+              </div>
+            </form>
+            <div class="acoes-tabela" style="margin-top: 2rem">
+              <button id="btn-salvar-edicao-funcionario" class="botao-submit">
+                Salvar
+              </button>
+              <button id="btn-cancelar-edicao-funcionario" class="botao-submit">
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="tela-produto" class="tela dividir escondido">
+          <div class="container-divisao-tela divisao-esquerda">
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:adicionar"></span>
+              Cadastrar Produto
+            </h1>
+            <form id="formulario-produto" class="container-formulario">
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome</label>
+                  <input name="nome" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Preço</label>
+                  <input name="preco" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Código</label>
+                  <input name="codigo" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Estoque</label>
+                  <input name="estoque" type="number" required />
+                </div>
+                <div class="campo" id="wrapper-categoria-produto">
+                  <label>Categoria</label>
+                  <div class="input-dinamico-wrapper">
+                    <select
+                      id="select-categoria-produto"
+                      name="id_categoria"
+                      required
+                    >
+                      <option value="">Carregando...</option>
+                    </select>
+                    <div
+                      id="container-nova-categoria"
+                      class="escondido acoes-inline"
+                    >
+                      <input
+                        type="text"
+                        id="input-nova-categoria"
+                        placeholder="Nome da categoria"
+                      />
+                      <div class="botoes-confirmacao">
+                        <button
+                          type="button"
+                          id="btn-confirmar-categoria"
+                          class="btn-icone-sucesso"
+                        >
+                          <span data-icon="fontawesome:adicionar"></span>
+                        </button>
+                        <button
+                          type="button"
+                          id="btn-cancelar-categoria"
+                          class="btn-icone-erro"
+                        >
+                          <span data-icon="fontawesome:fechar"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="campo inteiro">
+                  <label>Descrição</label>
+                  <textarea name="descricao" rows="2"></textarea>
+                </div>
+              </div>
+            </form>
+            <div class="acoes-cadastro">
+              <button id="cadastrar-produto" type="submit" class="botao-submit">
+                Cadastrar
+              </button>
+            </div>
+          </div>
+          <div
+            id="view-listagem-produto"
+            class="container-divisao-tela divisao-direita"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:lista"></span>
+              Lista de Produtos
+            </h1>
+            <div class="container-pesquisa">
+              <div class="campo inteiro">
+                <div class="pesquisa-wrapper">
+                  <label>
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Produto
+                  </label>
+                  <input
+                    data-filtro-alvo="tabela-tela-produto"
+                    placeholder="Qualquer informação do produto aqui"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container-tabela">
+              <div class="tabela-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Cód</th>
+                      <th>Produto</th>
+                      <th>Preço</th>
+                      <th>Estoque</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    data-tipo-tabela="produto"
+                    data-tabela-alvo="tabela-tela-produto"
+                  ></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="acoes-tabela">
+              <button id="btn-editar-produto" class="botao-submit">
+                Editar
+              </button>
+              <button id="btn-excluir-produto" class="botao-submit">
+                Excluir
+              </button>
+            </div>
+          </div>
+          <div
+            id="view-edicao-produto"
+            class="container-divisao-tela divisao-direita escondido"
+          >
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:editar"></span>
+              Editar Produto
+            </h1>
+            <form id="formulario-edicao-produto" class="container-formulario">
+              <input type="hidden" name="id" />
+              <div class="grade-formulario">
+                <div class="campo inteiro">
+                  <label>Nome</label>
+                  <input name="nome" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Preço</label>
+                  <input name="preco" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Código</label>
+                  <input name="codigo" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Estoque</label>
+                  <input name="estoque" type="number" required />
+                </div>
+                <div class="campo">
+                  <label>Categoria</label>
+                  <select
+                    name="id_categoria"
+                    class="select-categoria-geral"
+                    required
+                  >
+                    <option value="">Carregando...</option>
+                  </select>
+                </div>
+                <div class="campo inteiro">
+                  <label>Descrição</label>
+                  <textarea name="descricao" rows="2"></textarea>
+                </div>
+              </div>
+            </form>
+            <div class="acoes-tabela" style="margin-top: 2rem">
+              <button id="btn-salvar-edicao-produto" class="botao-submit">
+                Salvar
+              </button>
+              <button id="btn-cancelar-edicao-produto" class="botao-submit">
+                Cancelar
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section id="tela-venda" class="tela dividir">
+          <div class="container-divisao-tela divisao-esquerda">
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:adicionar"></span>
+              Cadastrar Venda
+            </h1>
+            <form id="formulario-venda" class="container-formulario">
+              <div class="grade-formulario">
+                <div class="campo">
+                  <label>
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Cliente
+                  </label>
+                  <div class="pesquisa-wrapper">
+                    <input
+                      type="text"
+                      data-filtro-alvo="tabela-cliente-tela-venda"
+                    />
+                  </div>
+                </div>
+                <div class="campo">
+                  <label>
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Produto
+                  </label>
+                  <div class="pesquisa-wrapper">
+                    <input
+                      type="text"
+                      data-filtro-alvo="tabela-produto-tela-venda"
+                    />
+                  </div>
+                </div>
+                <div class="campo">
+                  <div class="tabela-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Nome</th>
+                          <th>CPF</th>
+                          <th>Sexo</th>
+                          <th>Telefone</th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        data-tipo-tabela="cliente"
+                        data-tabela-alvo="tabela-cliente-tela-venda"
+                      ></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="campo">
+                  <div class="tabela-wrapper">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Cód</th>
+                          <th>Produto</th>
+                          <th>Preço</th>
+                          <th>Estoque</th>
+                        </tr>
+                      </thead>
+                      <tbody
+                        data-tipo-tabela="produto"
+                        data-tabela-alvo="tabela-produto-tela-venda"
+                      ></tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="campo">
+                  <label>Cpf</label>
+                  <input name="cpf" type="text" required />
+                </div>
+                <div class="campo">
+                  <label>Codigo</label>
+                  <input name="codigo" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Data</label>
+                  <input name="formdata" type="date" />
+                </div>
+                <div class="campo">
+                  <label>Preço</label>
+                  <input name="preco" type="text" />
+                </div>
+                <div class="campo">
+                  <label>Quantidade</label>
+                  <input name="quantidade" type="number" />
+                </div>
+                <div class="campo">
+                  <label>Pagamento</label>
+                  <select name="pagamento">
+                    <option value="DINHEIRO">Dinheiro</option>
+                    <option value="CARTAO">Cartão</option>
+                    <option value="PIX">Pix</option>
+                  </select>
+                </div>
+                <div class="campo">
+                  <label>Parcelas</label>
+                  <input
+                    name="parcelas"
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="12"
+                  />
+                </div>
+              </div>
+            </form>
+            <div class="acoes-cadastro">
+              <button id="cadastrar-venda" type="submit" class="botao-submit">
+                Cadastrar
+              </button>
+            </div>
+          </div>
+          <div class="container-divisao-tela divisao-direita">
+            <h1 class="container-titulo">
+              <span data-icon="fontawesome:lista"></span>
+              Histórico de Vendas
+            </h1>
+            <div class="container-pesquisa">
+              <div class="campo inteiro">
+                <div class="pesquisa-wrapper">
+                  <label>
+                    <span data-icon="fontawesome:lupa"></span>
+                    Buscar Venda
+                  </label>
+                  <input
+                    placeholder="Qualquer informação da venda aqui"
+                    type="text"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="container-tabela">
+              <div class="tabela-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Cód</th>
+                      <th>Data</th>
+                      <th>Total</th>
+                      <th>Cliente</th>
+                    </tr>
+                  </thead>
+                  <tbody data-tipo-tabela="venda"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </section>
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

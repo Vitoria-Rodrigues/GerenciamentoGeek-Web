@@ -1,10 +1,61 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+:root {
+  --font-main: "Montserrat", sans-serif;
+  --primary: #0062e9;
+  --primary-glow: rgba(1, 61, 121, 0.1);
+  --error: #e74c3c;
+  --background-dark: #0d0d0d;
+  --background-light: #f2f2f2;
+  --background-tint: #d8ebf2;
+  --background-shade: #253340;
+  --text-dark: #333;
+  --text-light: #f4f4f4;
+  --radius-lg: 1rem;
+  --radius-sm: 0.5rem;
+  --shadow-lg: 0 0.5rem 2rem rgba(0, 0, 0, 0.08);
+  --shadow-sm: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-html,body{
-    height: 100%;
-    width: 100%;
-    background: #EDEDED;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-main);
+  background: var(--background-light);
+  overflow: hidden;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+button {
+  border: none;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  transition: var(--transition);
+}
+input,
+select,
+textarea {
+  font: inherit;
+  border: none;
+  outline: none;
+  transition: var(--transition);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.campo-invalido {
+  border-color: #ff4d4d !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 77, 77, 0.2) !important;
 }

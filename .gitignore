@@ -1,12 +1,55 @@
 # ---------------------------------------------------------------- #
-# IGNORAR ARQUIVOS GERAIS DE PROJETOS DE DESENVOLVIMENTO
+# ARQUIVOS GERAIS E SISTEMA
 # ---------------------------------------------------------------- #
 .DS_Store
 Thumbs.db
 *.log
+.temp
+.cache
+dto.txt
+# ---------------------------------------------------------------- #
+# DEPENDÊNCIAS (Node e Outros)
+# ---------------------------------------------------------------- #
 node_modules/
 /package-lock.json
+dist/
 
-# Se usar IDEs como IntelliJ ou VS Code
+# ---------------------------------------------------------------- #
+# IDEs (IntelliJ, VS Code, NetBeans, STS)
+# ---------------------------------------------------------------- #
 .idea/
 .vscode/
+*.iws
+*.iml
+*.ipr
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# ---------------------------------------------------------------- #
+# BACKEND (Java / Maven / Spring Boot)
+# ---------------------------------------------------------------- #
+# Ignora pastas de build em qualquer nível do projeto
+**/target/
+**/build/
+.mvn/wrapper/maven-wrapper.jar
+
+# Mantém arquivos de target dentro de src (casos raros do Spring)
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# ---------------------------------------------------------------- #
+# MOCK SERVER (Específico do projeto)
+# ---------------------------------------------------------------- #
+# packages/mockserver/

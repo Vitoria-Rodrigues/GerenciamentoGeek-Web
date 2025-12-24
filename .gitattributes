@@ -1,0 +1,6 @@
+# Configurações globais para preservar finais de linha
+* text=auto
+
+# Arquivos específicos do Maven Wrapper
+/packages/backend/mvnw text eol=lf
+*.cmd text eol=crlf

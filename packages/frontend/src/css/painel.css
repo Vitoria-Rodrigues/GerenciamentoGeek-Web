@@ -1,0 +1,269 @@
+.painel {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.painel-telas {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tela {
+  position: relative;
+  inset: 0;
+  align-items: start;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+.tela:not(.escondido) {
+  display: flex;
+}
+
+.tela.dividir {
+  width: 100%;
+  height: auto;
+
+  gap: 2rem;
+}
+
+.container-divisao-tela {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.divisao-esquerda {
+  width: 40%;
+  flex: none;
+}
+
+.divisao-direita {
+  flex: 1;
+}
+
+.container-titulo {
+  font-size: 4vh;
+  color: var(--primary);
+  text-align: left;
+  font-weight: 700;
+  flex: none;
+}
+
+.container-formulario,
+.container-pesquisa,
+.container-tabela {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+}
+.tabela-dupla {
+  height: 100%;
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.container-formulario {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1;
+  overflow: auto;
+}
+
+.container-pesquisa {
+  padding: 1.2rem 1.5rem;
+  flex: none;
+}
+
+.container-tabela {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grade-formulario {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo.inteiro {
+  grid-column: 1 / -1;
+}
+
+.campo label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  background: #f8f8f8;
+  border: 0.1rem solid #e9e9e9;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  border-color: var(--primary);
+  background: #fff;
+  box-shadow: 0 0 0 0.2rem var(--primary-glow);
+}
+
+.pesquisa-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.pesquisa-wrapper input {
+  flex: 1;
+}
+
+.botao-acao-pesquisa {
+  padding: 0 1rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.acoes-cadastro {
+  display: flex;
+  justify-content: center;
+  flex: none;
+}
+
+.acoes-tabela {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.botao-submit {
+  padding: 0.8rem 2.5rem;
+  background: #fff;
+  color: var(--primary);
+  border: 0.15rem solid var(--primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+
+.botao-submit:hover {
+  background: var(--primary);
+  color: #fff;
+}
+.input-dinamico-wrapper {
+  width: auto;
+}
+.acoes-inline {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.botoes-confirmacao {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.btn-icone-sucesso {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-icone-erro {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tabela-wrapper {
+  width: 100%;
+  height: 25vh;
+  overflow: auto;
+  border: 0.05rem solid #eee;
+  border-radius: var(--radius-sm);
+}
+
+.tabela-wrapper tr {
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f9f9f9;
+  color: var(--primary);
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-bottom: 0.1rem solid #eef2f5;
+  position: sticky;
+  top: 0;
+}
+
+tr.selecionado {
+  background-color: var(--primary-glow) !important;
+  outline: 2px solid var(--primary);
+  cursor: pointer;
+}
+
+.escondido {
+  display: none !important;
+}
+td {
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+  border-bottom: 0.05rem solid #f0f0f0;
+}
+
+.escondido {
+  display: none !important;
+}
