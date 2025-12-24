@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "dev:frontend": "npm run dev -w @ggeek/frontend",
-    "front:build": "npm run build -w @ggeek/frontend",
+    "build:frontend": "npm run build -w @ggeek/frontend",
     "front:preview": "npm run preview -w @ggeek/frontend",
     "db:up": "docker compose up -d db",
     "db:down": "docker compose down",
