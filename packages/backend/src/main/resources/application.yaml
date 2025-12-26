@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:${DB_URI:mysql://localhost:3306/geek_management}
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:geek_management}
     username: ${DB_USER:root}
     password: ${DB_PASS:root}
   jpa:
